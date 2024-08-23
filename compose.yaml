@@ -1,0 +1,9 @@
+services:
+  db:
+    image: postgres:16-alpine
+    ports:
+      - 54320:5432
+    environment:
+      - POSTGRES_USER=root # default postgres
+      - POSTGRES_PASSWORD=secret # not null
+      - POSTGRES_DB=simple_bank
