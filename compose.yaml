@@ -4,6 +4,8 @@ services:
     ports:
       - 54320:5432
     environment:
-      - POSTGRES_USER=root # default postgres
-      - POSTGRES_PASSWORD=secret # not null
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
       - POSTGRES_DB=simple_bank
+    volumes:
+      - ./db-data/postgres/:/var/lib/postgresql/data/
